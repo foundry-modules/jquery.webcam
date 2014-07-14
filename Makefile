@@ -1,13 +1,9 @@
+all: modularize-script minify-script
 
-SWFMILL     := swfmill
-MTASC       := mtasc
+include ../../build/modules.mk
 
-MTASCSTDLIB := /usr/share/mtasc/std
+MODULE = jquery.webcam
+MODULARIZE_OPTIONS = -jq
 
-main:
-	$(SWFMILL) simple src/jscam.xml jscam.swf
-	$(MTASC) -v -swf jscam.swf -main jscam.as -version 8 -cp src -cp $(MTASCSTDLIB)
-
-clean:
-	rm -f jscam.swf
-
+copy-player: create-script-folder
+	cp ${SOURCE_SCRIPT_FOLDER}/jscam.swf ${TARGET_SCRIPT_FOLDER}/
