@@ -18,7 +18,7 @@
 
 	"mode": "callback", // callback | save | stream
 
-	"swffile": "jscam.swf",
+	"swffile": $.path + '/scripts/jquery.webcam/jscam.swf',
 	"quality": 85,
 
 	"debug":	function () {},
