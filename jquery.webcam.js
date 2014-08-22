@@ -18,7 +18,7 @@
 
 	"mode": "callback", // callback | save | stream
 
-	"swffile": $.path + '/scripts/jquery.webcam/jscam.swf',
+	"swffile": $.path + '/scripts/webcam/jscam.swf',
 	"quality": 85,
 
 	"debug":	function () {},
@@ -79,7 +79,7 @@
 		    try {
 			return cam["pauseCamera"]();
 		    } catch(e) {}
-		}		
+		}
 		webcam["resumeCamera"] = function() {
 		    try {
 			return cam["resumeCamera"]();
